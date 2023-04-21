@@ -10,7 +10,7 @@ const ASCIIAnimation = ({ frameCount, frameRate }) => {
       const fetchedFrames = [];
 
       for (let i = 0; i < frameCount; i++) {
-        const filePath = `/assets/spheres_output/sphere_ascii${i.toString().padStart(3, '0')}.txt`;
+        const filePath = process.env.PUBLIC_URL + `/assets/spheres_output/sphere_ascii${i.toString().padStart(3, '0')}.txt`;
         const response = await axios.get(filePath);
         fetchedFrames.push(response.data);
       }
