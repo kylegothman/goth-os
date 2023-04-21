@@ -36,7 +36,7 @@ export default function SideBar(props) {
   return (
     <>
       <div
-        className={(props.hide ? " -translate-x-full " : "") + " absolute transform duration-300 select-none z-40 left-0 top-0 h-full pt-14 w-auto flex flex-col shrink justify-start items-center border-black border-opacity-60 bg-black bg-opacity-50"}
+        className={(props.hide ? " -translate-x-full " : "") + " absolute transform duration-300 select-none z-40 left-0 top-0 h-full pt-14 w-auto flex flex-col justify-start items-center border-black border-opacity-60 bg-black bg-opacity-50"}
       >
        {renderApps(props)}
  
