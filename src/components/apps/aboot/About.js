@@ -16,7 +16,7 @@ export default function About() {
                 <li className=" list-pc">I'm a Full Stack Software Engineer who's been design & building industry utilized applications since my second year of college. Since then, I've worked in startups, taken on freelance projects and worked private consulting. ( Hit me up <a className='text-underline' href='kyle.gothman@gmail.com'><u>kyle.gothman@gmail.com</u></a> )</li>
                 <li className=" mt-3 list-building"> I enjoy building awesome software that tackle real-world challenges while also captivating users.</li>
                 <li className=" mt-3 list-time"> When I am not coding my next project, I like to spend my time making music, practicing yoga or listening <u className=' cursor-pointer '><a href="https://www.youtube.com/@lexfridman" target="_blank" rel="noreferrer">Lex Fridman</a></u> podcasts.</li>
-                <li className=" mt-3 list-star"> And I also have interest in robotics & projection mapping!</li>
+                <li className=" mt-3 list-star"> And I also have interest in game design & projection mapping!</li>
             </ul>
         </>
     )
