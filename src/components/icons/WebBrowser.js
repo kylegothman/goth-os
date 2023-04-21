@@ -5,7 +5,7 @@ import '../svg.css';
 export default function WebBrowser() {
     return (
         <div id="icon" className="web-browser">
-            <svg id="web-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-17 -22 160 160">
+            <svg id="web-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-17 -8 160 160">
                 <g id="web-browser">
                     <path id="border" className="web-cls-4" d="m125.9,1c-33.86,0-67.73,0-101.59,0-7.77,0-15.54,0-23.3,0v112.09h124.9s0,0,0,0V1Z"/>
                     <line className="web-cls-4" x1="1" y1="18.71" x2="125.9" y2="18.71"/>

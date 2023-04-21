@@ -5,7 +5,7 @@ import '../svg.css';
 export default function Aboot() {
     return (
         <div className="aboot">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 -21 160 160">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 -8 160 160">
             <g id="aboot">
                 <path id="border" className="ab-cls-3" d="m1,1c0,30.39,0,60.79,0,91.18,0,6.97,0,13.94,0,20.91h106.35V1H1Z"/>
                 <text id="Aboot" className="ab-cls-2" transform="translate(30.41 62.52)"><tspan x="0" y="0">ABO</tspan><tspan className="ab-cls-5" x="40.15" y="0">OT</tspan></text>

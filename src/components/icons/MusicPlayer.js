@@ -4,7 +4,7 @@ import '../svg.css';
 export default function MusicPlayer() {
     return (
         <div id="icon" className="music-player">
-            <svg id="mp-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-17 -27 160 160">
+            <svg id="mp-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-17 -14 160 160">
                 <g id="music_player" data-name="music player">
                     <rect id="mp-border" className="mp-cls-2" x="1" y="17.75" width="124.9" height="86.87"/>
                     <rect id="mp-border" className="mp-cls-3" x="1" y="49.82" width="124.9" height="54.8"/>

@@ -5,7 +5,7 @@ import '../svg.css';
 export default function GrooveBox() {
     return (
         <div className="dm-container">
-            <svg id="dm-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-18 -21 160 160">
+            <svg id="dm-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-18 -8 160 160">
             <g id="drum-machine">
                 <rect id="border" className="dm-cls-2" x="1" y="1" width="124.9" height="112.09"/>
                 <rect id="wsq-12" className="dm-cls-1" x="99.21" y="86.09" width="20.81" height="20.81" rx="2.33" ry="2.33"/>

@@ -4,7 +4,7 @@ import '../svg.css';
 export default function Calculator() {
     return (
         <div className="calculator">
-            <svg id="calc-layer-2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-33 -22 160 160">
+            <svg id="calc-layer-2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-33 -8 160 160">
             <g id="calculator">
                 <g>
                     <rect className="calc-cls-1" x=".5" y=".5" width="87.6" height="111.5"/>
