@@ -1,0 +1,85 @@
+.close-symbol {
+
+    height: 5px;
+    width: 5px;
+    line-height:normal;
+    font-variant-ligatures:normal;
+    font-variant-position:normal;
+    font-variant-caps:normal;
+    font-variant-numeric:normal;
+    font-variant-alternates:normal;
+    font-feature-settings:normal;
+    text-indent:0;
+    text-align:start;
+    text-decoration-line:none;
+    text-decoration-style:solid;
+    text-decoration-color:#000;
+    text-transform:none;
+    text-orientation:mixed;
+    isolation:auto;
+    mix-blend-mode:normal;
+}
+
+
+.maximize-symbol {
+    height: 5px;
+    width: 5px;
+    line-height: normal;
+    font-variant-ligatures: normal;
+    font-variant-position: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-alternates: normal;
+    font-feature-settings: normal;
+    text-indent: 0;
+    text-align: start;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-color: #000;
+    text-transform: none;
+    text-orientation: mixed;
+    isolation: auto;
+    mix-blend-mode: normal;
+}
+
+.minimize-symbol {
+        line-height: normal;
+        height: 5px;
+        width: 5px;
+        font-variant-ligatures: normal;
+        font-variant-position: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-variant-alternates: normal;
+        font-feature-settings: normal;
+        text-indent: 0;
+        text-align: start;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+        text-decoration-color: #000;
+        text-transform: none;
+        text-orientation: mixed;
+        isolation: auto;
+        mix-blend-mode: normal;
+}
+
+.restore-symbol {
+    height: 5px;
+    width: 5px;
+    line-height: normal;
+    font-variant-ligatures: normal;
+    font-variant-position: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-alternates: normal;
+    font-feature-settings: normal;
+    text-indent: 0;
+    text-align: start;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-color: #000;
+    text-transform: none;
+    text-orientation: mixed;
+    isolation: auto;
+    mix-blend-mode: normal;
+}

@@ -1,0 +1,44 @@
+.app-container {
+    /* Add the styles from the original component */
+    padding: 0.25rem;
+    margin: 1px;
+    position: relative;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 0.375rem;
+    width: 6rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .app-container:hover {
+    /* Add hover styles */
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .app-container:focus {
+    /* Add focus styles */
+    background-color: #fb5607;
+    background-opacity: 0.5;
+    border-color: #f59e0b;
+    border-opacity: 1;
+  }
+  
+  .app-icon {
+    /* Add styles for the icon */
+    margin-bottom: 0.25rem;
+    width: 2.5rem;
+  }
+
+
+
+  

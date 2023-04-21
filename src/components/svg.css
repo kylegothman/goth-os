@@ -1,0 +1,773 @@
+@font-face {
+    font-family: Gotham-Book7;
+    src: url(../../public/assets/fonts/Gotham-Book7.otf);
+}
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(../../public/assets/fonts/Gotham-Book7.otf);
+}
+
+
+body {
+    background-color: #121212;
+  }
+  
+  .app-dock {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20vh;
+    top: 1.75em;
+    left: 0px;
+    column-gap: 20px;
+    padding-top: 24px;
+    tab-size: 4;
+    background-color: none;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  p {
+    color: hsla(0, 0%, 100%, 0.87);
+    font-family: Gotham-Medium;
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+.app-set {
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.app-outer {
+		display: block;
+	}
+
+svg {
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+}
+
+
+ @keyframes rainbow-color-fill {	
+   0% {
+     fill: #DAB9FF;
+   }	
+     20% {
+     fill: #FFB9B9;
+   }
+     40% {
+     fill: #FFFEB9;
+     }
+     60% {
+     fill: #B9FFCC;
+     }
+     80% {
+     fill: #B9C9FF;	
+     }
+   100% {
+     fill: #DAB9FF;
+   }
+ }
+
+
+ 
+ @keyframes rainbow-color-stroke {	
+   0% {
+      stroke: #DAB9FF;
+   }	
+     20% {
+      stroke: #FFB9B9;
+   }
+     40% {
+      stroke: #FFFEB9;
+     }
+     60% {
+      stroke: #B9FFCC;
+     }
+     80% {
+      stroke: #B9C9FF;
+     }
+   100% {
+        stroke: #DAB9FF;
+   }
+ }
+
+ .skill-outer {
+    outline: none;
+}
+
+  /* .///////////////   Web Browser ///////////////. */
+
+
+ .web-cls-1 {
+    fill: #f3f3f3;
+}
+
+.web-cls-2, .web-cls-3 {
+    fill: #fff;
+}
+
+.web-cls-3, .web-cls-4, .web-cls-5 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+}
+
+.web-cls-4 {
+    stroke-width: 2px;
+}
+
+.web-cls-4, .web-cls-5 {
+    fill: none;
+}
+
+#empty-rectangle{
+    stroke-width: 1.5px;
+}
+
+#empty-web,
+#empty-heart {
+    stroke-width: .8px;
+}
+
+#full-shapes,
+#full-buttons {
+    display: none;
+}
+
+.web-browser:hover .web-cls-1,
+.web-browser:focus .web-cls-1,
+.web-browser:hover .web-cls-2,
+.web-browser:focus .web-cls-2,
+.web-browser:hover #full-shapes,
+.web-browser:focus #full-shapes,
+.web-browser:hover #full-buttons,
+.web-browser:focus #full-buttons {
+    animation: rainbow-color-fill 1s linear infinite;
+    display: block;
+}
+
+.web-browser:hover .web-cls-4,
+.web-browser:focus .web-cls-4 {
+    animation: rainbow-color-stroke 1s linear infinite;
+    display: block;
+}
+
+.web-browser:hover #empty-shapes,
+.web-browser:focus #empty-shapes,
+.web-browser:hover #empty-buttons,
+.web-browser:focus #empty-buttons {
+    display: none;
+}
+
+@keyframes showStar {
+    33.33%, 66.66% {
+        opacity: 1;
+    }
+    0%, 33.32%, 66.67%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showStar {
+    33.33%, 66.66% {
+        opacity: 1;
+    }
+    0%, 33.32%, 66.67%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showHeart {
+    66.67%, 100% {
+        opacity: 1;
+    }
+    0%, 66.66% {
+        opacity: 0;
+    }
+}
+  
+
+@keyframes showWeb {
+    0%, 33.33% {
+        opacity: 1;
+    }
+    33.34%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fullWebCombined {
+    0%, 33.33% {
+      opacity: 1;
+    }
+    33.34%, 100% {
+      opacity: 0;
+    }
+    0%, 20%, 40%, 60%, 80%, 100% {
+      animation-timing-function: step-end;
+    }
+  }
+  
+  @keyframes fullStarCombined {
+    33.33%, 66.66% {
+      opacity: 1;
+    }
+    0%, 33.32%, 66.67%, 100% {
+      opacity: 0;
+    }
+    0%, 20%, 40%, 60%, 80%, 100% {
+      animation-timing-function: step-end;
+    }
+  }
+  
+  @keyframes fullHeartCombined {
+    66.67%, 100% {
+      opacity: 1;
+    }
+    0%, 66.66% {
+      opacity: 0;
+    }
+    0%, 20%, 40%, 60%, 80%, 100% {
+      animation-timing-function: step-end;
+    }
+  }
+
+
+.web-browser:hover #full-web,
+.web-browser:active #full-web {
+  animation: fullWebCombined 3s infinite, rainbow-color-fill 1s linear infinite;
+}
+
+.web-browser:hover #full-heart,
+.web-browser:active #full-heart {
+  animation: fullHeartCombined 3s infinite, rainbow-color-fill 1s linear infinite;
+}
+
+.web-browser:hover #full-star,
+.web-browser:hover #full-star {
+  animation: fullStarCombined 3s infinite, rainbow-color-fill 1s linear infinite;
+}
+
+#empty-web {
+    animation: showWeb 3s infinite;
+}
+
+#empty-heart {
+    animation: showHeart 3s infinite;
+}
+
+#empty-star {
+    animation: showStar 3s infinite;
+
+}
+
+
+
+
+ /* .///////////////   Terminal  ///////////////. */
+
+
+ .cls-1 {
+    fill: #fff;
+  }
+
+.cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+
+#border_active {
+    display: none;
+  }
+
+#Layer_2:hover #arrow,
+#Layer_2:focus #arrow,
+#Layer_2:hover #border,
+#Layer_2:focus #border {
+    display: none
+}
+
+#Layer_2:hover #border_active,
+#Layer_2:focus  #border_active {
+    display: block;
+    animation: rainbow-color-fill 1s linear infinite;
+}
+
+#underscore {
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .10;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .10;
+    }
+
+}
+ 
+ 
+ /* ./////////////////////  Calculator  /////////////////////. */
+
+
+ .calc-cls-1, .calc-cls-2 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.calc-cls-1, .calc-cls-2, .calc-cls-3 {
+    fill: none;
+    stroke: #fff;
+}
+
+.calc-cls-2 {
+    stroke-width: 2px;
+}
+
+.calc-cls-3 {
+    stroke-miterlimit: 10;
+}
+
+.calculator:hover .calc-cls-1,
+.calculator:focus .calc-cls-1,
+.calculator:hover .calc-cls-2,
+.calculator:focus .calc-cls-2,
+.calculator:focus .calc-cls-3,
+.calculator:hover .calc-cls-3 {
+   animation: rainbow-color-stroke 1s linear infinite;
+}
+
+
+
+ 
+
+
+ /* ./////////////////////  Aboot  /////////////////////. */
+
+
+ .ab-cls-3, .ab-cls-2 {
+    fill: #fff;
+  }
+
+  .ab-cls-3 {
+    stroke-width: 2px;
+  }
+
+  .ab-cls-3, .ab-cls-4 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+
+  .ab-cls-5 {
+    letter-spacing: -.04em;
+  }
+
+  .ab-cls-2 {
+    font-family: Gotham-Medium, Gotham;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+.ab-cls-1 {
+    display: none;
+}
+
+.aboot:hover .ab-cls-2,
+.aboot:active .ab-cls-2 {
+    display: none;
+}
+
+.aboot:hover .ab-cls-4,
+.aboot:focus .ab-cls-4,
+.aboot:hover #border,
+.aboot:active #border {
+    display: block;
+    animation: rainbow-color-stroke 1s linear infinite;
+}
+
+.aboot:hover .ab-cls-1,
+.aboot:active .ab-cls-1 {
+    display: block;
+    animation: rainbow-color-fill 1s linear infinite;
+}
+
+ 
+
+  /* ./////////////////////   Drum Machine  ///////////////////// */
+
+svg:hover .dm-cls-1,
+svg:focus .dm-cls-1 {
+    animation: rainbow-color-fill 1s linear infinite;
+  }
+
+.dm-container:hover .dm-cls-2,
+.dm-container:focus .dm-cls-2,
+.dm-container:hover .dm-cls-3,
+.dm-container:focus .dm-cls-3 {
+animation: rainbow-color-stroke 1s linear infinite;
+    }
+    
+
+  .dm-cls-1, .dm-cls-2, .dm-cls-3 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+
+  .dm-cls-2 {
+    stroke-width: 2px;
+  }
+
+  .dm-cls-2, .dm-cls-3 {
+    fill: none;
+  }
+
+  .dm-cls-1 {
+    animation: pulse 4s infinite; 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        fill: #FFF
+    }
+    50% {
+        fill: #FFF;
+        opacity: 0.1;
+    }
+}
+
+#wsq-01 {
+    animation-delay: 0s;
+  }
+#wsq-02 {
+    animation-delay: 0.3s;
+  }
+#wsq-03 {
+    animation-delay: 0.6s;
+  }
+#wsq-04 {
+    animation-delay: 0.9s;
+  }
+#wsq-05 {
+    animation-delay: 1.2s;
+  }
+#wsq-06 {
+    animation-delay: 1.5s;
+  }
+#wsq-07 {
+    animation-delay: 1.8s;
+  }
+#wsq-08 {
+    animation-delay: 2.1s;
+  }
+#wsq-09 {
+    animation-delay: 2.4s;
+  }
+#wsq-10 {
+    animation-delay: 2.7s;
+  }
+#wsq-11 {
+    animation-delay: 3s;
+  }
+#wsq-12 {
+    animation-delay: 3.3s;
+  }
+
+
+ /* ./////////////////////   Music Player  ///////////////////// */
+
+ .mp-cls-1 {
+    fill: #fff;
+}
+
+.mp-cls-2 {
+    stroke-width: 2px;
+}
+
+.mp-cls-2, .mp-cls-3 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+}
+
+ @keyframes interactiveMotion0 {
+     from{
+         d: circle("M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0");
+     }
+     to {
+         d: circle("M60,61.83a20,20 0 1,0 40,0a20,20 0 1,0 -40,0");
+         opacity: 0;	
+     }
+ }
+ 
+ @keyframes interactiveMotion1 {
+     from{
+         d: circle("M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0");
+     }
+     to {
+         d: circle("M55,61.83a25,25 0 1,0 50,0a25,25 0 1,0 -50,0");
+         opacity: 0;	
+     }
+ }
+ 
+ @keyframes interactiveMotion2 {
+     from{
+         d: circle("M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0");
+     }
+     to {
+         d: circle("M50,61.83a30,30 0 1,0 60,0a30,30 0 1,0 -60,0");
+         opacity: 0;	
+     }
+ }
+ 
+ @keyframes interactiveMotion3 {
+     from{
+         d: circle("M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0");
+     }
+     to {
+         d: circle("M45,61.83a35,35 0 1,0 70,0a35,35 0 1,0 -70,0");
+         opacity: 0;	
+     }
+ }
+ 
+ 
+ @keyframes interactiveMotion4 {
+     from{
+         d: circle("M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0");
+     }
+     to {
+         d: circle("M40,61.83a40,40 0 1,0 80,0a40,40 0 1,0 -80,0");
+         opacity: 0;	
+     }
+ }
+
+ .ellipse{
+    fill: #fff;
+    opacity: .9;
+ }
+ 
+ .ellipse0{
+    stroke: #fff;
+    fill: none;
+    animation: interactiveMotion0 .8s  ease-out infinite;
+ }
+ 
+ .ellipse1{
+    stroke: #fff;
+    opacity: .8;
+    fill: none;
+     animation: interactiveMotion1 .8s  ease-out infinite;
+     animation-delay: 0.03s;
+ }
+ .ellipse2 {
+    stroke: #fff;
+    opacity: 0.7;
+    fill: none;
+     animation: interactiveMotion2 .8s  ease-out infinite;
+     animation-delay: .06s;
+ }
+ .ellipse3 {
+    stroke: #fff;
+    opacity: 0.4;
+    fill: none;
+     animation: interactiveMotion3 .8s  ease-out infinite;
+     animation-delay: .09s;
+ }
+ .ellipse4 {
+    stroke: #fff;
+    opacity: .2;
+    fill: none;
+     animation: interactiveMotion4 .8s ease-out infinite;
+     animation-delay: .12s;
+ }
+ 
+ 
+.music-player:hover .ellipse,
+.music-player:focus .ellipse {
+    animation: rainbow-color-stroke .5s linear infinite ;
+    }
+
+.music-player:hover .ellipse0,
+.music-player:focus .ellipse0 {
+    stroke: #B9C9FF;
+    }
+
+.music-player:hover .ellipse1,
+.music-player:focus .ellipse1 {
+    stroke: #B9FFCC;
+    }
+
+.music-player:hover .ellipse2,
+.music-player:focus .ellipse2 {
+    stroke: #FFFEB9;
+    }
+
+.music-player:hover .ellipse3,
+.music-player:focus .ellipse3 {
+    stroke: #FFB9B9;
+    }
+
+.music-player:hover .ellipse4,
+.music-player:focus .ellipse4 {
+    stroke: #DAB9FF;
+}
+
+.music-player:hover rect,
+.music-player:focus rect {
+    animation: rainbow-color-stroke 1s linear infinite ;
+    }
+
+.music-player:hover path,
+.music-player:focus path {
+    animation: rainbow-color-fill 1s linear infinite ;
+    }
+
+ 
+
+/*  ./////////////////////  Settings  ///////////////////// */
+
+ .settings-cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+ 
+ 
+ 
+ 
+ /* ./////////////////////  pong  ///////////////////// */
+
+.pong:hover line,
+.pong:focus line,
+.pong:hover path,
+.pong:focus path,
+.pong:hover rect,
+.pong:focus rect {
+    animation: rainbow-color-stroke 1s linear infinite ;
+}
+
+ .pong-cls-1 {
+    stroke-width: 2px;
+}
+
+.pong-cls-1, .pong-cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+}
+
+
+@keyframes bounceBall {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-77px);
+    }
+    90% {
+      transform: translateX(34px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  } 
+ 
+  @keyframes movePlayer1 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+  }
+
+  @keyframes movePlayer2 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+  }
+  
+
+  #ball {
+    animation: bounceBall 4s linear infinite;
+  }
+  
+  #player1 {
+    animation: movePlayer1 3s ease-in-out infinite;
+  }
+
+  #player2 {
+    animation: movePlayer2 3s ease-in-out infinite;
+  }
+
+
+
+
+
+
+ /* ./////////////////////  typo  ///////////////////// */
+
+ 
+ @keyframes typoWave {
+     from {
+         d: path("M124.74 38l32.64 82.45-7.25-6.14a3 3 0 0 0-3.83 0l-5.3 4.51a3.66 3.66 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.82 0l-5.35 4.53a3.64 3.64 0 0 1-4.7 0l-5.34-4.52a3 3 0 0 0-3.83 0l-5.34 4.53a3.66 3.66 0 0 1-4.7 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.53a3.67 3.67 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.52a3.64 3.64 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.83 0l-5.35 4.53a3.63 3.63 0 0 1-4.7 0l-7.71-6.52L17.25 38z");
+     }
+     to {
+         d: path("M120 38l10.39 21.31-7.25-6.15a3 3 0 0 0-3.83 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.39 4.51a3.63 3.63 0 0 1-4.7 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.82 0l-5.35 4.53a3.63 3.63 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.82 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0L27 53.14a3 3 0 0 0-3.83 0l-5.36 4.53a3.63 3.63 0 0 1-4.7 0l-7.7-6.52L12.46 38z");
+     }
+ }
+ 
+ @keyframes typoWaveHover {
+     from {
+         d: path("M124.74 38l32.64 82.45-7.25-6.14a3 3 0 0 0-3.83 0l-5.3 4.51a3.66 3.66 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.82 0l-5.35 4.53a3.64 3.64 0 0 1-4.7 0l-5.34-4.52a3 3 0 0 0-3.83 0l-5.34 4.53a3.66 3.66 0 0 1-4.7 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.53a3.67 3.67 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.52a3.64 3.64 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.83 0l-5.35 4.53a3.63 3.63 0 0 1-4.7 0l-7.71-6.52L17.25 38z");
+     }
+     to {
+         d: path("M120 38l10.39 21.31-7.25-6.15a3 3 0 0 0-3.83 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.39 4.51a3.63 3.63 0 0 1-4.7 0l-5.34-4.53a3 3 0 0 0-3.83 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0l-5.34-4.53a3 3 0 0 0-3.82 0l-5.35 4.53a3.63 3.63 0 0 1-4.7 0l-5.35-4.53a3 3 0 0 0-3.82 0l-5.34 4.53a3.65 3.65 0 0 1-4.71 0L27 53.14a3 3 0 0 0-3.83 0l-5.36 4.53a3.63 3.63 0 0 1-4.7 0l-7.7-6.52L12.46 38z");
+     }
+ }
+ 
+ 
+ .wave-middle {
+     animation: typoWave 3s ease-out infinite alternate;
+ }
+ 
+ 
+ 
+ .typo {
+     &:hover,
+     &:focus {
+         .typo-right-under,
+         .typo-left-under,
+         text {
+             animation: rainbow-color-fill 1s linear infinite ;
+         }		
+         .typo-right-under,
+         .typo-left-under,
+         .typo-right-top,
+         .typo-left-top {
+             stroke: transparent;
+         }
+         
+     }
+ }

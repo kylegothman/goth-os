@@ -1,0 +1,86 @@
+import React from 'react';
+import '../svg.css';
+
+
+
+export default function Pong() {
+    return (
+        <div className="pong">
+        <svg id="pong-layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="-18 0 160 160">
+            <g id="pong">
+                <g>
+                <rect id="border" className="pong-cls-2" x=".5" y="27.19" width="124.9" height="112.09"/>
+                    <line id="player1" className="pong-cls-1" x1="6.49" y1="75.46" x2="6.49" y2="90.84"/>
+                    <line id="player2" className="pong-cls-1" x1="119.52" y1="75.46" x2="119.52" y2="90.84"/>
+                    <line id="ball" className="pong-cls-1" x1="83.43" y1="83.7" x2="83.43" y2="86.33"/>
+                    <g id="dashed_line" data-name="dashed line">
+                        <line id="player2-2" data-name="player2" className="pong-cls-2" x1="62.68" y1="37.72" x2="62.68" y2="39.78"/>
+                        <line id="player2-3" data-name="player2" className="pong-cls-2" x1="62.68" y1="41.38" x2="62.68" y2="43.44"/>
+                        <line id="player2-4" data-name="player2" className="pong-cls-2" x1="62.68" y1="45.04" x2="62.68" y2="47.1"/>
+                        <line id="player2-5" data-name="player2" className="pong-cls-2" x1="62.68" y1="26.74" x2="62.68" y2="28.8"/>
+                        <line id="player2-6" data-name="player2" className="pong-cls-2" x1="62.68" y1="30.4" x2="62.68" y2="32.46"/>
+                        <line id="player2-7" data-name="player2" className="pong-cls-2" x1="62.68" y1="34.06" x2="62.68" y2="36.12"/>
+                        <line id="player2-8" data-name="player2" className="pong-cls-2" x1="62.68" y1="48.7" x2="62.68" y2="50.76"/>
+                        <line id="player2-9" data-name="player2" className="pong-cls-2" x1="62.68" y1="52.36" x2="62.68" y2="54.42"/>
+                        <line id="player2-10" data-name="player2" className="pong-cls-2" x1="62.68" y1="56.02" x2="62.68" y2="58.08"/>
+                        <line id="player2-11" data-name="player2" className="pong-cls-2" x1="62.68" y1="59.68" x2="62.68" y2="61.74"/>
+                        <line id="player2-12" data-name="player2" className="pong-cls-2" x1="62.68" y1="63.34" x2="62.68" y2="65.4"/>
+                        <line id="player2-13" data-name="player2" className="pong-cls-2" x1="62.68" y1="67" x2="62.68" y2="69.06"/>
+                        <line id="player2-14" data-name="player2" className="pong-cls-2" x1="62.68" y1="70.66" x2="62.68" y2="72.72"/>
+                        <line id="player2-15" data-name="player2" className="pong-cls-2" x1="62.68" y1="74.32" x2="62.68" y2="76.38"/>
+                        <line id="player2-16" data-name="player2" className="pong-cls-2" x1="62.68" y1="77.98" x2="62.68" y2="80.04"/>
+                        <line id="player2-17" data-name="player2" className="pong-cls-2" x1="62.68" y1="81.64" x2="62.68" y2="83.7"/>
+                        <line id="player2-18" data-name="player2" className="pong-cls-2" x1="62.68" y1="85.3" x2="62.68" y2="87.36"/>
+                        <line id="player2-19" data-name="player2" className="pong-cls-2" x1="62.68" y1="88.96" x2="62.68" y2="91.02"/>
+                        <line id="player2-20" data-name="player2" className="pong-cls-2" x1="62.68" y1="92.62" x2="62.68" y2="94.68"/>
+                        <line id="player2-21" data-name="player2" className="pong-cls-2" x1="62.68" y1="96.28" x2="62.68" y2="98.34"/>
+                        <line id="player2-22" data-name="player2" className="pong-cls-2" x1="62.68" y1="99.94" x2="62.68" y2="102"/>
+                        <line id="player2-23" data-name="player2" className="pong-cls-2" x1="62.68" y1="103.6" x2="62.68" y2="105.66"/>
+                        <line id="player2-24" data-name="player2" className="pong-cls-2" x1="62.68" y1="107.26" x2="62.68" y2="109.32"/>
+                        <line id="player2-25" data-name="player2" className="pong-cls-2" x1="62.68" y1="110.92" x2="62.68" y2="112.98"/>
+                        <line id="player2-26" data-name="player2" className="pong-cls-2" x1="62.68" y1="114.58" x2="62.68" y2="116.64"/>
+                        <line id="player2-27" data-name="player2" className="pong-cls-2" x1="62.68" y1="118.24" x2="62.68" y2="120.3"/>
+                        <line id="player2-28" data-name="player2" className="pong-cls-2" x1="62.68" y1="121.9" x2="62.68" y2="123.96"/>
+                        <line id="player2-29" data-name="player2" className="pong-cls-2" x1="62.68" y1="125.56" x2="62.68" y2="127.62"/>
+                        <line id="player2-30" data-name="player2" className="pong-cls-2" x1="62.68" y1="129.22" x2="62.68" y2="131.28"/>
+                        <line id="player2-31" data-name="player2" className="pong-cls-2" x1="62.68" y1="132.88" x2="62.68" y2="134.94"/>
+                        <line id="player2-32" data-name="player2" className="pong-cls-2" x1="62.68" y1="136.54" x2="62.68" y2="138.6"/>
+                    </g>
+                    <g id="_3" data-name="3">
+                        <path id="player2-33" data-name="player2" className="pong-cls-1" d="m50.92,33.18s-.81,0-.81,0c-.48,0-6.07,0-6.55,0"/>
+                        <path id="player2-34" data-name="player2" className="pong-cls-1" d="m50.92,38.76s-.81,0-.81,0c-.48,0-6.07,0-6.55,0"/>
+                        <path id="player2-35" data-name="player2" className="pong-cls-1" d="m50.92,44.35s-.81,0-.81,0c-.48,0-6.07,0-6.55,0"/>
+                        <path id="player2-36" data-name="player2" className="pong-cls-1" d="m49.9,32.29s0,1.42,0,1.44c0,.85,0,10.71,0,11.57"/>
+                    </g>
+                    <g id="PONG">
+                        <path id="player2-37" data-name="player2" className="pong-cls-1" d="m46.21,1.02s-.69,0-.7,0c-.42,0-5.23,0-5.64,0"/>
+                        <path id="player2-38" data-name="player2" className="pong-cls-1" d="m46.21,7.43s-.69,0-.7,0c-.42,0-5.23,0-5.64,0"/>
+                        <path id="player2-39" data-name="player2" className="pong-cls-1" d="m47.24,6.43s0-.48,0-.49c0-.29,0-3.63,0-3.92"/>
+                        <path id="player2-40" data-name="player2" className="pong-cls-1" d="m40.87.12s0,1.6,0,1.61c0,.96,0,12.04,0,13"/>
+                        <path id="player2-41" data-name="player2" className="pong-cls-1" d="m51.54,2.03s0,1.16,0,1.17c0,.69,0,8.7,0,9.4"/>
+                        <path id="player2-42" data-name="player2" className="pong-cls-1" d="m64.19.12s0,1.6,0,1.61c0,.96,0,12.04,0,13"/>
+                        <path id="player2-43" data-name="player2" className="pong-cls-1" d="m72.61,0s0,1.6,0,1.61c0,.96,0,12.04,0,13"/>
+                        <path id="player2-44" data-name="player2" className="pong-cls-1" d="m76.89,2.13s0,1.14,0,1.16c0,.69,0,8.62,0,9.3"/>
+                        <path id="player2-45" data-name="player2" className="pong-cls-1" d="m85.15,2.13s0,.25,0,.25c0,.15,0,1.86,0,2.01"/>
+                        <path id="player2-46" data-name="player2" className="pong-cls-1" d="m59.87,2.03s0,1.16,0,1.17c0,.69,0,8.7,0,9.4"/>
+                        <path id="player2-47" data-name="player2" className="pong-cls-1" d="m58.91,1.01s-.7,0-.71,0c-.42,0-5.28,0-5.7,0"/>
+                        <path id="player2-48" data-name="player2" className="pong-cls-1" d="m67.3,5.31s-.24,0-.24,0c-.14,0-1.8,0-1.94,0"/>
+                        <path id="player2-49" data-name="player2" className="pong-cls-1" d="m84.14,1.15s-.69,0-.69,0c-.41,0-5.17,0-5.58,0"/>
+                        <path id="player2-50" data-name="player2" className="pong-cls-1" d="m86.15,9.54s-.45,0-.46,0c-.27,0-3.4,0-3.67,0"/>
+                        <path id="player2-51" data-name="player2" className="pong-cls-1" d="m84.16,13.58s-.69,0-.69,0c-.41,0-5.18-.01-5.59-.02"/>
+                        <path id="player2-52" data-name="player2" className="pong-cls-1" d="m85.15,8.59s0,.44,0,.44c0,.26,0,3.3,0,3.56"/>
+                        <path id="player2-53" data-name="player2" className="pong-cls-1" d="m69.49,7.31s-.24,0-.24,0c-.14,0-1.8,0-1.94,0"/>
+                        <path id="player2-54" data-name="player2" className="pong-cls-1" d="m71.68,9.31s-.24,0-.24,0c-.14,0-1.8,0-1.94,0"/>
+                        <path id="player2-55" data-name="player2" className="pong-cls-1" d="m58.91,13.59s-.7,0-.71,0c-.42,0-5.28,0-5.7,0"/>
+                    </g>
+                    <g id="_4" data-name="4">
+                        <path id="player2-56" data-name="player2" className="pong-cls-1" d="m75.34,39.73s0-.82,0-.83c0-.49,0-6.16,0-6.65"/>
+                        <path id="player2-57" data-name="player2" className="pong-cls-1" d="m81.8,38.74s-.81,0-.81,0c-.48,0-6.07,0-6.55,0"/>
+                        <path id="player2-58" data-name="player2" className="pong-cls-1" d="m80.79,32.26s0,1.42,0,1.44c0,.85,0,10.71,0,11.57"/>
+                    </g>
+                </g>
+            </g>
+            </svg>
+        </div>
+    );
+    }
