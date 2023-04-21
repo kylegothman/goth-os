@@ -1,7 +1,7 @@
 Retro Desktop Portfolio Website
 This project is a retro desktop-themed portfolio website that showcases creativity, programming skills, and a unique user experience. The website includes interactive components such as a groove box, web browser, pong, and calculator, with plans to add more animations and background options in the future.
 
-![Project screenshot](https://github.com/kylegothman/goth-os/blob/main/images/screenshot.jpg)
+![Project screenshot](https://github.com/kylegothman/goth-os/public/images/screenshot.png)
 
 Technologies Used
 React
