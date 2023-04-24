@@ -59,6 +59,6 @@ export default function Aboot() {
 
 const Resume = () => {
   return (
-    <iframe className="h-full w-full" src={process.env.PUBLIC_URL + "/files/kyleGothmanResume.pdf"} title="Kyle Gothman's resume" frameBorder="0"></iframe>
-  )
+    <iframe className="h-full w-full" src={process.env.PUBLIC_URL + "/files/kyleGothman-Resume.pdf"} title="Kyle Gothman's resume" frameBorder="0"></iframe>
+  ) 
 };

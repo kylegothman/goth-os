@@ -26,7 +26,7 @@ export default function Status() {
           height="16px"
           src={process.env.PUBLIC_URL + "/assets/icons/SVG/fullscreen.svg"}
           alt="full screen"
-          className="inline status-symbol min-w-16 h-4"
+          className="hidden lg:inline status-symbol min-w-16 h-4"
         />
         <span className="hidden lg:inline mx-3.5 font-vt323 text-xl">Fullscreen</span>
       </span>
