@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/goth-os/static/css/main.1f9f6473.css",
-    "main.js": "/goth-os/static/js/main.253d9df6.js",
+    "main.js": "/goth-os/static/js/main.8e7a718b.js",
     "static/js/787.ee35b5af.chunk.js": "/goth-os/static/js/787.ee35b5af.chunk.js",
     "static/media/Gotham-Book7.otf": "/goth-os/static/media/Gotham-Book7.b6e803be8fc1a5258c5e.otf",
     "index.html": "/goth-os/index.html",
     "main.1f9f6473.css.map": "/goth-os/static/css/main.1f9f6473.css.map",
-    "main.253d9df6.js.map": "/goth-os/static/js/main.253d9df6.js.map",
+    "main.8e7a718b.js.map": "/goth-os/static/js/main.8e7a718b.js.map",
     "787.ee35b5af.chunk.js.map": "/goth-os/static/js/787.ee35b5af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f9f6473.css",
-    "static/js/main.253d9df6.js"
+    "static/js/main.8e7a718b.js"
   ]
 }
