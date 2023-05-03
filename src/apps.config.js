@@ -13,6 +13,14 @@ import DisAboot from './components/apps/aboot/Aboot';
 
 const apps = [
     {
+        id: "Aboot",
+        title: "Aboot",
+        icon: <Aboot/>,
+        disabled: false,
+        desktop_shortcut: false,
+        screen: <DisAboot/>,
+    },
+    {
         id: "web-browser",
         title: "Web Browser",
         icon: <WebBrowser/>,
@@ -51,14 +59,6 @@ const apps = [
         disabled: false,
         desktop_shortcut: false,
         screen: <DisGrooveBox/>,
-    },
-    {
-        id: "Aboot",
-        title: "Aboot",
-        icon: <Aboot/>,
-        disabled: false,
-        desktop_shortcut: false,
-        screen: <DisAboot/>,
     },
 
 ]
