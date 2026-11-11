@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Goth OS mark: Gotham "G" on the dark tile used by favicon.ico -->
+  <rect width="64" height="64" rx="7" fill="#222222"/>
+  <g transform="translate(11.37 50.7) scale(0.0534 -0.0534)">
+    <path fill="#ffffff" stroke="#ffffff" stroke-width="60" stroke-linejoin="round" d="M424 -12C542 -12 640 37 705 95V374H416V303H629V129C581 90 507 59 427 59C257 59 150 183 150 350V352C150 508 261 639 416 639C515 639 575 606 629 559L680 619C610 678 537 712 419 712C209 712 68 542 68 350V348C68 148 204 -12 424 -12Z"/>
+  </g>
+</svg>

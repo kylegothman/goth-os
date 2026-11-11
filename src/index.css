@@ -2,76 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* Self-hosted retro terminal font (OFL). The .ttf is kept as a fallback for very old browsers. */
+@font-face {
+  font-family: 'VT323';
+  src: url(./assets/fonts/VT323-Regular.woff2) format('woff2'),
+       url(./assets/fonts/VT323-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ubuntu Font Family 0.83 (Ubuntu Font Licence 1.0, see assets/fonts/ubuntu/UFL.txt). Body text. */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/ubuntu/Ubuntu-Light.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/ubuntu/Ubuntu-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/ubuntu/Ubuntu-Italic.woff2) format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/ubuntu/Ubuntu-Medium.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(./assets/fonts/ubuntu/Ubuntu-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  font-display: swap;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  background-color: #121212;
+  overflow: hidden;
 }
+
 .font-vt323 {
   font-family: 'VT323', monospace;
 }
 
-.sidebar {
-  position: absolute;
-  transition: transform 0.3s;
+/* While a window is being dragged or resized, iframes must not swallow pointer events. */
+.react-draggable-transparent-selection iframe,
+.is-resizing iframe {
+  pointer-events: none;
+}
+
+.is-resizing {
   user-select: none;
-  z-index: 40;
-  left: 0;
-  top: 0;
-  height: 100%;
-  padding-top: 7px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-right: 1px solid black;
-  background-color: rgba(0, 0, 0, 0.5);
-}   
-
-.sidebar-hidden {
-  transform: translateX(-100%);
 }
 
-.sidebar-hover-area {
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: 50;
-}
-
-.top-arrow-up {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #333333;
-}
-
-.arrow-custom {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid white;
-}
-
+/* Aboot: mobile nav dropdown */
 .animateShow {
   animation: transformDownShow 200ms 1 forwards;
 }
 
 @keyframes transformDownShow {
   0% {
-      transform: translateY(-10px);
-      opacity: 0;
+    transform: translateY(-10px);
+    opacity: 0;
   }
 
   100% {
-      transform: translateY(0px);
-      opacity: 1;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
+/* Navbar: volume slider */
 input[type=range].slider {
   outline: none;
   -webkit-appearance: none;
@@ -79,7 +99,6 @@ input[type=range].slider {
   background-position: center;
   background-size: 99% 3px;
   background-repeat: no-repeat;
-  /* width: 65%; */
   height: 6px;
   border-radius: 50%;
 }
@@ -98,54 +117,12 @@ input[type=range].slider::-webkit-slider-thumb {
   position: relative;
 }
 
-/* Window's styling */
-.arrow-custom-up {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid white;
-  width: 0;
-}
-
-.arrow-custom-down {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid white;
-  width: 0;
-}
-
-.arrow-custom-left {
-  border-bottom: 5px solid transparent;
-  border-top: 5px solid transparent;
-  border-right: 5px solid white;
-  width: 0;
-}
-
-.arrow-custom-right {
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid white;
-  width: 0;
-}
-
-.window-y-border {
-  height: calc(100% - 10px);
-  width: calc(100% + 10px);
-  cursor: e-resize;
-}
-
-.window-x-border {
-  height: calc(100% + 10px);
-  width: calc(100% - 10px);
-  cursor: n-resize;
-}
-
+/* Windows */
 .notFocused {
   filter: brightness(90%);
 }
 
-.root,
-#root,
-#docs-root {
+#root {
   --window-transform-x: 0px;
   --window-transform-y: 0px;
 }
@@ -162,15 +139,15 @@ input[type=range].slider::-webkit-slider-thumb {
 
 @keyframes closeWindow {
   0% {
-      opacity: 1;
-      transform: translate(var(--window-transform-x), var(--window-transform-y)) scale(1);
-      visibility: visible;
+    opacity: 1;
+    transform: translate(var(--window-transform-x), var(--window-transform-y)) scale(1);
+    visibility: visible;
   }
 
   100% {
-      opacity: 0;
-      transform: translate(var(--window-transform-x), var(--window-transform-y)) scale(0.85);
-      visibility: hidden;
+    opacity: 0;
+    transform: translate(var(--window-transform-x), var(--window-transform-y)) scale(0.85);
+    visibility: hidden;
   }
 }
 
@@ -189,33 +166,8 @@ input[type=range].slider::-webkit-slider-thumb {
   border-radius: 5px;
 }
 
-/* SideBarApp Scale image onClick */
-.scalable-app-icon {
-  visibility: hidden;
-}
-
-.scalable-app-icon.scale {
-  animation: scaleAppImage 400ms 1 forwards;
-}
-
-@keyframes scaleAppImage {
-  0% {
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-
-/* Context Menu */
-.context-menu-bg {
-  background-color: rgb(43, 43, 43);
-}
-
-.emoji-list>li {
+/* Aboot: emoji bullet lists */
+.emoji-list > li {
   padding-left: 10px;
 }
 
@@ -238,4 +190,3 @@ input[type=range].slider::-webkit-slider-thumb {
 .list-arrow {
   list-style: "⇀";
 }
-
