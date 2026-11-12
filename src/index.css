@@ -91,6 +91,15 @@ body {
   }
 }
 
+/* Dock: scrolls on very short viewports, without showing a scrollbar */
+.dock-scroll {
+  scrollbar-width: none;
+}
+
+.dock-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /* Navbar: volume slider */
 input[type=range].slider {
   outline: none;

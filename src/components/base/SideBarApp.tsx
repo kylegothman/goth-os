@@ -30,7 +30,10 @@ export default function SideBarApp({ id, icon, title, isClose, isFocus, openApp 
       }
       id={`sidebar-${id}`}
     >
-      <div className="h-20">{icon}</div>
+      {/* Icons shrink on short viewports so the whole dock stays on screen. */}
+      <div className="h-20 w-[100px] [@media(max-height:820px)]:h-14 [@media(max-height:820px)]:w-[72px] flex items-center justify-center">
+        {icon}
+      </div>
       {/* Dot marking an open app, like the Ubuntu dock. */}
       {isOpen && <div className="absolute left-0 top-1/2 w-1 h-1 rounded-full bg-ub-orange" aria-hidden="true" />}
       <div

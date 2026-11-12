@@ -1,6 +1,6 @@
 # Goth OS
 
-A retro desktop-themed portfolio site. Apps open in draggable, resizable windows over an animated ASCII background: an about page, a web browser, Pong, 3D Space Invaders (a Three.js port of the Java/JOGL original), a calculator, a music player, and a groove box.
+A retro desktop-themed portfolio site. Apps open in draggable, resizable windows over an animated ASCII background: an about page, a web browser, Pong, 3D Space Invaders (a Three.js port of the Java/JOGL original), Yukon's Gold (a gold-mining RTS embedded from its own deployment), a calculator, a music player, and a groove box.
 
 **Live:** https://kylegothman.github.io/goth-os/
 

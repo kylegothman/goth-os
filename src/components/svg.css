@@ -742,3 +742,63 @@ animation: rainbow-color-stroke 1s linear infinite;
 #si-bolt {
     animation: siBolt 1.2s linear infinite;
 }
+
+
+ /* ./////////////////////  yukon's gold  ///////////////////// */
+
+.yg-cls-1,
+.yg-cls-3 {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.yg-cls-1 {
+    stroke-width: 2.5px;
+}
+
+.yg-cls-3 {
+    stroke-width: 4px;
+}
+
+.yg-cls-2 {
+    fill: #fff;
+    stroke: none;
+}
+
+.yukons-gold:hover .yg-cls-1,
+.yukons-gold:focus .yg-cls-1,
+.yukons-gold:hover .yg-cls-3,
+.yukons-gold:focus .yg-cls-3 {
+    animation: rainbow-color-stroke 1s linear infinite;
+}
+
+.yukons-gold:hover .yg-cls-2,
+.yukons-gold:focus .yg-cls-2 {
+    animation: rainbow-color-fill 1s linear infinite;
+}
+
+/* Arm and pickaxe pivot at the shoulder: a quick strike, a short hold, a slow lift */
+#yg-swing {
+    transform-box: view-box;
+    transform-origin: 92px 78px;
+    animation: ygSwing 1.6s infinite;
+}
+
+@keyframes ygSwing {
+    0%   { transform: rotate(-8deg); animation-timing-function: ease-in; }
+    42%  { transform: rotate(96deg); animation-timing-function: linear; }
+    52%  { transform: rotate(96deg); animation-timing-function: ease-out; }
+    100% { transform: rotate(-8deg); }
+}
+
+#yg-spark {
+    animation: ygSpark 1.6s infinite;
+}
+
+@keyframes ygSpark {
+    0%, 41% { opacity: 0; }
+    43%, 56% { opacity: 1; }
+    62%, 100% { opacity: 0; }
+}

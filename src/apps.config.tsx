@@ -4,6 +4,8 @@ import DisWebBrowser from './components/apps/WebBrowser';
 import DisGrooveBox from './components/apps/GrooveBox';
 import DisAboot from './components/apps/aboot/Aboot';
 import DisPong from './components/apps/pong/Pong';
+import DisYukonsGold from './components/apps/YukonsGold';
+import YukonsGold from './components/icons/YukonsGold';
 import WebBrowser from './components/icons/WebBrowser';
 import MusicPlayer from './components/icons/MusicPlayer';
 import GrooveBox from './components/icons/GrooveBox';
@@ -77,6 +79,15 @@ const apps: AppConfig[] = [
         <DisSpaceInvaders/>
       </Suspense>
     ),
+  },
+  {
+    id: "yukons-gold",
+    title: "Yukon's Gold",
+    icon: <YukonsGold/>,
+    disabled: false,
+    desktop_shortcut: false,
+    defaultWindowSize: { width: 1280, height: 820 },
+    screen: <DisYukonsGold/>,
   },
   {
     id: "Calculator",

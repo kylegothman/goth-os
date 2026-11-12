@@ -27,6 +27,38 @@ window.addEventListener('message', (event) => {
 });
 ```
 
+## Receiver for Yukon's Gold (`src/view/audio.ts` in the yukons-gold repo)
+
+`Sfx` already owns a master `GainNode` (0.7, or 0 when muted). Scale it by the site volume:
+
+```ts
+const MASTER_LEVEL = 0.7;
+
+export class Sfx {
+  // ...existing fields...
+  /** 0..1, forwarded by Goth OS when the game is embedded there. */
+  siteVolume = 1;
+
+  constructor() {
+    try { this.muted = localStorage.getItem(MUTE_KEY) === '1'; } catch { /* default on */ }
+    window.addEventListener('message', (e) => {
+      if (!/^https:\/\/kylegothman\.github\.io$|^http:\/\/localhost(:\d+)?$/.test(e.origin)) return;
+      if (e.data?.type !== 'goth-os:volume') return;
+      this.setSiteVolume(Number(e.data.volume));
+    });
+  }
+
+  private level() { return this.muted ? 0 : MASTER_LEVEL * this.siteVolume; }
+
+  setSiteVolume(v: number) {
+    this.siteVolume = Math.min(1, Math.max(0, v || 0));
+    if (this.ctx) this.master.gain.setTargetAtTime(this.level(), this.ctx.currentTime, 0.05);
+  }
+  // in start():   this.master.gain.value = this.level();
+  // in setMuted(): this.master.gain.setTargetAtTime(this.level(), this.ctx.currentTime, 0.05);
+}
+```
+
 ## Receiver for a plain `<audio>` / `<video>` page
 
 ```js

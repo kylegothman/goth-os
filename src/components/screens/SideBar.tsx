@@ -33,7 +33,7 @@ export default function SideBar(props: SideBarProps) {
       <div
         className={
           (props.hide ? '-translate-x-full ' : '') +
-          'absolute transform duration-300 select-none z-40 left-0 top-0 h-full pt-14 w-auto flex flex-col justify-start items-center border-black border-opacity-60 bg-black bg-opacity-50'
+          'dock-scroll absolute transform duration-300 select-none z-40 left-0 top-0 h-full pt-14 pb-4 w-auto flex flex-col justify-start items-center overflow-y-auto border-black border-opacity-60 bg-black bg-opacity-50'
         }
       >
         {props.apps.map((app) => (
