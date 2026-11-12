@@ -1,4 +1,5 @@
-import { useState, type ReactNode } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 interface SideBarAppProps {
   id: string;
@@ -9,21 +10,36 @@ interface SideBarAppProps {
   openApp: (id: string) => void;
 }
 
+interface TooltipPosition {
+  x: number;
+  y: number;
+}
+
 export default function SideBarApp({ id, icon, title, isClose, isFocus, openApp }: SideBarAppProps) {
-  const [showTitle, setShowTitle] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const [tooltip, setTooltip] = useState<TooltipPosition | null>(null);
   const isOpen = isClose[id] === false;
+
+  // The label is rendered on document.body (a portal) rather than inside the dock, because the
+  // dock clips its overflow (it scrolls on short viewports) and the label sits to its right.
+  const showTooltip = () => {
+    const rect = ref.current?.getBoundingClientRect();
+    if (rect) setTooltip({ x: rect.right + 12, y: rect.top + 10 });
+  };
+  const hideTooltip = () => setTooltip(null);
 
   const handleOpenApp = () => {
     openApp(id);
-    setShowTitle(false);
+    hideTooltip();
   };
 
   return (
     <div
+      ref={ref}
       tabIndex={0}
       onClick={handleOpenApp}
-      onMouseEnter={() => setShowTitle(true)}
-      onMouseLeave={() => setShowTitle(false)}
+      onMouseEnter={showTooltip}
+      onMouseLeave={hideTooltip}
       className={
         (isOpen && isFocus[id] ? 'bg-white bg-opacity-10 ' : '') +
         'w-auto p-2 outline-none relative transition hover:bg-white hover:bg-opacity-10 rounded m-1 justify-center items-center flex flex-col'
@@ -36,11 +52,16 @@ export default function SideBarApp({ id, icon, title, isClose, isFocus, openApp 
       </div>
       {/* Dot marking an open app, like the Ubuntu dock. */}
       {isOpen && <div className="absolute left-0 top-1/2 w-1 h-1 rounded-full bg-ub-orange" aria-hidden="true" />}
-      <div
-        className={`${showTitle ? 'visible' : 'invisible'} w-max py-0.5 px-1.5 absolute top-1.5 left-full ml-3 m-1 text-ubt-grey text-opacity-90 text-sm bg-ub-grey bg-opacity-70 border-gray-400 border border-opacity-40 rounded-md`}
-      >
-        {title}
-      </div>
+      {tooltip && createPortal(
+        <div
+          className="fixed z-50 pointer-events-none w-max py-0.5 px-1.5 text-ubt-grey text-opacity-90 text-sm bg-ub-grey bg-opacity-70 border-gray-400 border border-opacity-40 rounded-md"
+          style={{ left: tooltip.x, top: tooltip.y }}
+          role="tooltip"
+        >
+          {title}
+        </div>,
+        document.body,
+      )}
     </div>
   );
 }
