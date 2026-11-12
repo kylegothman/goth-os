@@ -3,6 +3,7 @@
 const tagClasses: Record<string, string> = {
     "javascript": "border-yellow-300 text-yellow-300",
     "typescript": "border-sky-400 text-sky-400",
+    "three.js": "border-emerald-400 text-emerald-400",
     "postgresql": "border-red-600 text-red-600",
     "ai": "border-red-500 text-red-500",
     "firebase auth": "border-red-400 text-red-400",
@@ -31,6 +32,17 @@ interface Project {
 }
 
 const project_list: Project[] = [
+    {
+        name: "Yukon's Gold",
+        date: "Nov 2026",
+        link: "https://github.com/kylegothman/yukons-gold",
+        description: [
+            "A gold mining strategy game in the browser, playable right here on the Goth OS desktop: stake a claim, hire hands, and work from shovel and pan up to excavators and a wash plant before the 100-day season ends",
+            "The simulation is deterministic and kept separate from the Three.js view, so a bot can play full seasons to check the balance. 29 tests cover the rules",
+            "No asset files: every model and sound is generated in code, and the whole game builds to a single HTML file",
+        ],
+        domains: ["typescript", "three.js"],
+    },
     {
         name: "Autonomous Trading System",
         date: "May 2026",
